@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Custom Properties */
+
+:root {
+    --leading: 2em;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.hero-bg {
+    color: rgb(255, 255, 255);
+    background-color: rgb(230, 150, 3);
+    text-align: center;
+    padding-bottom: 4em;
+}
+
+header {
+    padding: 1em 0;
+}
+
+.hero-bg a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+section {
+    margin: 0 1em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 2em 0 1.2em;
+}
+
+.hero-bg p {
+    font-weight: bold;
+    margin: 0 1em 3em;
+    font-size: 1.3rem;
+}
+
+.join {
+    background-color: white;
+    margin: 2em -1em 0;
+    padding: 2em;
+}
+
+.join h4 {
+    color: gray;
+    margin-bottom: 1.5em;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+button {
+    background-color: #f8920449;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.699);
+    padding: 1em 0;
+    border-radius: .5em;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #c2730449;
+}
+
+.info {
+    margin: 0;
+}
+
+.right-col {
+    text-align: center;
+    margin: 3em 1em;
+}
+
+h2 {
+    text-transform: uppercase;
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    line-height: var(--leading);
+}
+
+@media (min-width: 730px) {
+
+    section {
+        margin: 0 4em;
+    }
+
+    .join {
+        margin: 2em -4em 0;
+    }
+
+}
+
+@media (min-width: 930px) {
+
+    .hero-bg {
+        text-align: left;
+    }
+
+    .hero-bg p {
+        margin: 0 0 3em;
+    }
+
+    .hero-bg section {
+        width: 65%;
+    }
+
+    .join {
+        margin: 2em 0 0;
+        padding: 2em;
+        border-radius: .5em;
+        box-shadow: 10px 10px 10px rgba(0,0,0,.3);
+    }
+
+    form {
+        display: flex;
+    }
+
+    .form-left {
+        width: 70%;
+    }
+    label {
+        margin: 0;
+    }
+    button {
+        height: fit-content;
+        font-size: 1.1em;
+        margin-left: 1em;
+        margin-top: 2.2em;
+        padding: .7em 0;
+        width: 70%;
+    }
+
+    section.info {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas: 
+            "sample content";
+    }
+
+    .right-col {
+        grid-area: content;
+        padding: 0 10%;
+        align-self: center;
+        text-align: left;
+    }
+
+    img {
+        grid-area: sample;
+    }
+}
+
+@media (min-width: 1600px) {
+    button {
+        width: 30%;
+        margin-bottom: 1.5em;
+    }
+
+    .join h4 {
+        font-size: 2em;
+    }
+
+    .join {
+        background-color: white;
+        margin: 2em 0;
+        padding: 2em;
+    }
+}
+
+.top {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-2em);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
